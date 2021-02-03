@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initializeButtons();
+
 
          mGestureDetector = new GestureDetectorCompat(this, new GestureListener());
 
@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity
                 ackerView.setThreading(Animator.Threading.ASYNCHRONOUS);
             }
         }).start();
+        initializeButtons();
     }
 
 

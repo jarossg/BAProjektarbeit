@@ -15,7 +15,7 @@ public class Steuerung
             @Override
             public void onClick(View v)
             {
-                herdenManager.rind.geheVor();
+                herdenManager.rind.geheHoch();
             }
         });
         runter.setOnClickListener(new View.OnClickListener()
@@ -23,7 +23,7 @@ public class Steuerung
             @Override
             public void onClick(View v)
             {
-                herdenManager.rind.geheVor();
+                herdenManager.rind.geheRunter();
             }
         });
         rechts.setOnClickListener(new View.OnClickListener()
@@ -31,7 +31,7 @@ public class Steuerung
             @Override
             public void onClick(View v)
             {
-                herdenManager.rind.geheVor();
+                herdenManager.rind.geheRechts();
             }
         });
         links.setOnClickListener(new View.OnClickListener()
@@ -39,7 +39,7 @@ public class Steuerung
             @Override
             public void onClick(View v)
             {
-                herdenManager.rind.geheVor();
+                herdenManager.rind.geheLinks();
             }
         });
     }

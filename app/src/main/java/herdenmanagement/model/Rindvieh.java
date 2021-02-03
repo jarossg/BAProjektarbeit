@@ -236,6 +236,71 @@ public class Rindvieh extends PositionsElement{
         }
     }
 
+
+    public void geheHoch()
+    {
+        Position pos = gibPosition();
+        pos.y = pos.y - 1;
+       if (gehtsDaWeiter(RichtungsTyp.NORD))
+       {
+           setzePosition(pos);
+       }
+    }
+
+    public void geheRunter()
+    {
+        Position pos = gibPosition();
+        pos.y = pos.y + 1;
+        if (gehtsDaWeiter(RichtungsTyp.SUED))
+        {
+            setzePosition(pos);
+        }
+    }
+
+    public void geheRechts()
+    {
+        Position pos = gibPosition();
+        pos.x = pos.x + 1;
+        if (gehtsDaWeiter(RichtungsTyp.OST))
+        {
+            setzePosition(pos);
+        }
+    }
+
+    public void geheLinks()
+    {
+        Position pos = gibPosition();
+        pos.x = pos.x - 1;
+        if (gehtsDaWeiter(RichtungsTyp.WEST))
+        {
+            setzePosition(pos);
+        }
+    }
+
+    private boolean gehtsDaWeiter(RichtungsTyp richtung)
+    {
+        Position position = gibPosition();
+        switch (richtung) {
+            case NORD:
+                position.y = position.y - 1;
+                return gibAcker().istPositionGueltig(position);
+
+            case OST:
+                position.x = position.x + 1;
+                return gibAcker().istPositionGueltig(position);
+
+            case SUED:
+                position.y = position.y + 1;
+                return gibAcker().istPositionGueltig(position);
+
+            case WEST:
+                position.x = position.x - 1;
+                return gibAcker().istPositionGueltig(position);
+
+            default:
+                return false;
+        }
+    }
     /**
      * Diese Methode ändert die Blickrichtung der Kuh. Um die neue Richtung zu verstehen, muss
      * man sich in die Position der Kuh versetzen. Blickt sie momentan nach
