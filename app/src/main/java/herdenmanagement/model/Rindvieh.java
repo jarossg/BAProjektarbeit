@@ -384,4 +384,13 @@ public class Rindvieh extends PositionsElement{
     public boolean gehtsDaWeiterZurueck() {
         return gehtsDaWeiter(false);
     }
+    public void bewegeRind(RichtungsTyp richtung) {
+        if (richtung.equals(this.gibRichtung())) {
+            this.geheVor();
+        } else {
+            while (!(richtung.equals(this.gibRichtung()))) {
+                this.dreheDichRechtsRum();
+            }
+        }
+    }
 }
