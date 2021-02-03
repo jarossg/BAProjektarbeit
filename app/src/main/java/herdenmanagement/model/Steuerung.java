@@ -43,4 +43,43 @@ public class Steuerung
             }
         });
     }
+
+    public static void Management(ImageButton rauchen, ImageButton melken, ImageButton fressen, ImageButton spawn, final HerdenManager herdenManager)
+    {
+        rauchen.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                herdenManager.rind.raucheGras();
+            }
+        });
+
+        melken.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                herdenManager.rind.gibMilch();
+            }
+        });
+
+        fressen.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                herdenManager.rind.frissGras();
+            }
+        });
+
+        spawn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                //Hier wird das Rind unsichtbar
+            }
+        });
+    }
 }

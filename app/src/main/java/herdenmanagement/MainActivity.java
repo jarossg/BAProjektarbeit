@@ -3,16 +3,19 @@ package herdenmanagement;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GestureDetectorCompat;
 import androidx.core.view.MotionEventCompat;
 
 import de.ba.herdenmanagement.R;
 import herdenmanagement.model.Acker;
+import herdenmanagement.model.Rindvieh;
 import herdenmanagement.model.Steuerung;
 import herdenmanagement.view.AckerView;
 import herdenmanagement.view.Animator;
@@ -34,6 +37,8 @@ public class MainActivity extends AppCompatActivity
     private ImageButton fressen;
     private ImageButton spawn;
 
+    private GestureDetectorCompat mGestureDetector;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -41,12 +46,12 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
 
-
-         mGestureDetector = new GestureDetectorCompat(this, new GestureListener());
+        mGestureDetector = new GestureDetectorCompat(this, new GestureListener());
 
 
     }
-    
+
+
     private class GestureListener extends GestureDetector.SimpleOnGestureListener {
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
@@ -141,7 +146,7 @@ public class MainActivity extends AppCompatActivity
         // Den Zustand des Threadings wieder herstellen
         ackerView.setThreading(currentThreading);
     }
-
+/*
     public boolean onTouchEvent(MotionEvent event)
     {
 
@@ -171,7 +176,7 @@ public class MainActivity extends AppCompatActivity
 
 
     }
-
+*/
 
     void initializeButtons()
     {
@@ -186,6 +191,7 @@ public class MainActivity extends AppCompatActivity
         spawn = findViewById(R.id.spawn);
 
         Steuerung.Bewegung(hoch,runter,rechts,links,herdenManager);
+        Steuerung.Management(rauchen,melken,fressen,spawn,herdenManager);
     }
 }
 
