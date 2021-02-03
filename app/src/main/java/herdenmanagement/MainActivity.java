@@ -6,12 +6,14 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.MotionEventCompat;
 
 import de.ba.herdenmanagement.R;
 import herdenmanagement.model.Acker;
+import herdenmanagement.model.Steuerung;
 import herdenmanagement.view.AckerView;
 import herdenmanagement.view.Animator;
 
@@ -20,24 +22,29 @@ public class MainActivity extends AppCompatActivity
 {
 
     private static final String DEBUG_TAG = "Debug";
-    private HerdenManager herdenManager;
+    public HerdenManager herdenManager;
 
-    private Button hoch;
+    private ImageButton hoch;
+    private ImageButton runter;
+    private ImageButton rechts;
+    private ImageButton links;
+
+    private ImageButton rauchen;
+    private ImageButton melken;
+    private ImageButton fressen;
+    private ImageButton spawn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        hoch = findViewById(R.id.button);
-        hoch.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                herdenManager.rind.geheVor();
-            }
-        });
+
+        initializeButtons();
+
+
+
+
     }
 
     protected void onStart()
@@ -130,6 +137,22 @@ public class MainActivity extends AppCompatActivity
         }
 
 
+    }
+
+
+    void initializeButtons()
+    {
+        hoch = findViewById(R.id.hoch);
+        runter = findViewById(R.id.runter);
+        rechts = findViewById(R.id.rechts);
+        links = findViewById(R.id.links);
+
+        rauchen = findViewById(R.id.rauchen);
+        melken = findViewById(R.id.melken);
+        fressen = findViewById(R.id.fressen);
+        spawn = findViewById(R.id.spawn);
+
+        Steuerung.Bewegung(hoch,runter,rechts,links,herdenManager);
     }
 }
 

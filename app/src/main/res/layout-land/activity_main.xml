@@ -17,96 +17,96 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintEnd_toStartOf="@+id/melken"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/fressen"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:hapticFeedbackEnabled="true"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton8"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/spawn"
+        app:layout_constraintEnd_toEndOf="@+id/rechts"
+        app:layout_constraintTop_toTopOf="@+id/rauchen"
         app:srcCompat="@drawable/kuh_gras" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/rauchen"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginTop="16dp"
         android:hapticFeedbackEnabled="true"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="@+id/imageButton3"
+        app:layout_constraintEnd_toEndOf="@+id/fressen"
+        app:layout_constraintStart_toStartOf="@+id/melken"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/kuh_rauch" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/melken"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginEnd="48dp"
         android:hapticFeedbackEnabled="true"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/spawn"
+        app:layout_constraintEnd_toStartOf="@+id/fressen"
+        app:layout_constraintTop_toTopOf="@+id/rauchen"
         app:srcCompat="@drawable/eimer" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/spawn"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginTop="48dp"
         android:hapticFeedbackEnabled="true"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintEnd_toEndOf="@+id/fressen"
+        app:layout_constraintStart_toStartOf="@+id/melken"
+        app:layout_constraintTop_toBottomOf="@+id/rauchen"
         app:srcCompat="@drawable/kuh" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/hoch"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginBottom="48dp"
         android:hapticFeedbackEnabled="true"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton6"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton8"
-        app:layout_constraintStart_toStartOf="@+id/imageButton7"
+        app:layout_constraintBottom_toTopOf="@+id/runter"
+        app:layout_constraintEnd_toEndOf="@+id/rechts"
+        app:layout_constraintStart_toStartOf="@+id/links"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/runter"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginBottom="16dp"
         android:hapticFeedbackEnabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton8"
-        app:layout_constraintStart_toStartOf="@+id/imageButton7"
+        app:layout_constraintEnd_toEndOf="@+id/rechts"
+        app:layout_constraintStart_toStartOf="@+id/links"
         app:srcCompat="@android:drawable/arrow_down_float" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/links"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginEnd="48dp"
         android:hapticFeedbackEnabled="true"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton6"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton8"
-        app:layout_constraintTop_toTopOf="@+id/imageButton5"
+        app:layout_constraintBottom_toBottomOf="@+id/runter"
+        app:layout_constraintEnd_toStartOf="@+id/rechts"
+        app:layout_constraintTop_toTopOf="@+id/hoch"
         app:srcCompat="?attr/homeAsUpIndicator" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/rechts"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginEnd="8dp"
         android:hapticFeedbackEnabled="true"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton6"
+        app:layout_constraintBottom_toBottomOf="@+id/runter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton5"
+        app:layout_constraintTop_toTopOf="@+id/hoch"
         app:srcCompat="@android:drawable/ic_media_play" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
