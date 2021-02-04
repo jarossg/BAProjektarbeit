@@ -456,12 +456,15 @@ public class Rindvieh extends PositionsElement{
     public boolean gehtsDaWeiterZurueck() {
         return gehtsDaWeiter(false);
     }
-    public void bewegeRind(RichtungsTyp richtung) {
+     public void bewegeRind(RichtungsTyp richtung) {
         if (richtung.equals(this.gibRichtung())) {
             this.geheVor();
         } else {
-            while (!(richtung.equals(this.gibRichtung()))) {
+            if(((richtung==RichtungsTyp.NORD)&&(this.gibRichtung()==RichtungsTyp.SUED))||((richtung==RichtungsTyp.SUED)&&(this.gibRichtung()==RichtungsTyp.NORD))||((richtung==RichtungsTyp.WEST)&&(this.gibRichtung()==RichtungsTyp.OST))||((richtung==RichtungsTyp.OST)&&(this.gibRichtung()==RichtungsTyp.WEST))){
                 this.dreheDichRechtsRum();
+                this.dreheDichRechtsRum();
+            }else {
+                this.setRichtung(richtung);
             }
         }
     }
