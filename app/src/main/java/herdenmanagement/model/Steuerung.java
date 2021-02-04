@@ -78,7 +78,7 @@ public class Steuerung
             @Override
             public void onClick(View v)
             {
-                //Hier wird das Rind unsichtbar
+                //herdenManager.rind.s
             }
         });
     }

@@ -15,6 +15,7 @@ import androidx.core.view.MotionEventCompat;
 
 import de.ba.herdenmanagement.R;
 import herdenmanagement.model.Acker;
+import herdenmanagement.model.GestureListener;
 import herdenmanagement.model.Rindvieh;
 import herdenmanagement.model.Steuerung;
 import herdenmanagement.view.AckerView;
@@ -44,38 +45,6 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        mGestureDetector = new GestureDetectorCompat(this, new GestureListener());
-
-
-    }
-
-
-    private class GestureListener extends GestureDetector.SimpleOnGestureListener {
-        @Override
-        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-
-            float abstandY = e2.getY() - e1.getY();
-            float abstandX = e2.getX() - e1.getX();
-
-            if(Math.abs(abstandX)>Math.abs(abstandY)){
-                if(abstandX>0){
-                    herdenManager.rind.bewegeRind(Rindvieh.RichtungsTyp.OST);
-                }else{
-                    herdenManager.rind.bewegeRind(Rindvieh.RichtungsTyp.WEST);
-                }
-            }else{
-                if(abstandY>0){
-                    herdenManager.rind.bewegeRind(Rindvieh.RichtungsTyp.SUED);
-                }else{
-                    herdenManager.rind.bewegeRind(Rindvieh.RichtungsTyp.NORD);
-                }
-            }
-            //etwas machen
-            //Toast.makeText(MainActivity.this, "Hallo",Toast.LENGTH_SHORT).show();
-            return super.onFling(e1, e2, velocityX, velocityY);
-        }
     }
 
     @Override
@@ -115,7 +84,10 @@ public class MainActivity extends AppCompatActivity
                 ackerView.setThreading(Animator.Threading.ASYNCHRONOUS);
             }
         }).start();
+
         initializeButtons();
+
+        mGestureDetector = new GestureDetectorCompat(this, (GestureDetector.OnGestureListener) new GestureListener(herdenManager));
     }
 
 
@@ -146,37 +118,7 @@ public class MainActivity extends AppCompatActivity
         // Den Zustand des Threadings wieder herstellen
         ackerView.setThreading(currentThreading);
     }
-/*
-    public boolean onTouchEvent(MotionEvent event)
-    {
 
-        int action = MotionEventCompat.getActionMasked(event);
-
-        switch (action)
-        {
-            case (MotionEvent.ACTION_DOWN):
-                Log.d(DEBUG_TAG, "Action was DOWN");
-                return true;
-            case (MotionEvent.ACTION_MOVE):
-                Log.d(DEBUG_TAG, "Action was MOVE");
-                return true;
-            case (MotionEvent.ACTION_UP):
-                Log.d(DEBUG_TAG, "Action was UP");
-                return true;
-            case (MotionEvent.ACTION_CANCEL):
-                Log.d(DEBUG_TAG, "Action was CANCEL");
-                return true;
-            case (MotionEvent.ACTION_OUTSIDE):
-                Log.d(DEBUG_TAG, "Movement occurred outside bounds " +
-                        "of current screen element");
-                return true;
-            default:
-                return super.onTouchEvent(event);
-        }
-
-
-    }
-*/
 
     void initializeButtons()
     {
