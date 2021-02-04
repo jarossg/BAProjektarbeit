@@ -93,11 +93,13 @@ public class Rindvieh extends PositionsElement{
      *
      * @param name Name der Kuh
      */
+    public boolean sichtbar;
     public Rindvieh(String name) {
         this.name = name;
         this.status = StatusTyp.WARTET;
         this.milchImEuter = 0;
         this.richtung = RichtungsTyp.OST;
+        this.sichtbar = true;
     }
 
     /**

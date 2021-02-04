@@ -151,6 +151,16 @@ public class Acker extends BeobachtbaresElement {
 
         informiereBeobachter(PROPERTY_VIECHER, null, rind);
     }
+    public void macheRindUnsichtbar(Rindvieh rind)
+    {
+        //rind.setzeAcker(null);
+        //viecher.remove(rind);
+        informiereBeobachter(PROPERTY_VIECHER, rind, null);
+    }
+    public void macheRindSichtbar(Rindvieh rind)
+    {
+        informiereBeobachter(PROPERTY_VIECHER, null, rind);
+    }
 
     /**
      * Stellt einen Eimer auf den Acker. Rinder können hier zukünftig

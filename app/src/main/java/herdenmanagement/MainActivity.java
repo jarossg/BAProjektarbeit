@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
+    public boolean onTouchEvent(MotionEvent event)
+    {
         mGestureDetector.onTouchEvent(event);
         return super.onTouchEvent(event);
     }
@@ -132,8 +133,8 @@ public class MainActivity extends AppCompatActivity
         fressen = findViewById(R.id.fressen);
         spawn = findViewById(R.id.spawn);
 
-        Steuerung.Bewegung(hoch,runter,rechts,links,herdenManager);
-        Steuerung.Management(rauchen,melken,fressen,spawn,herdenManager);
+        Steuerung.Bewegung(hoch, runter, rechts, links, herdenManager);
+        Steuerung.Management(rauchen, melken, fressen, spawn, herdenManager);
     }
 }
 

@@ -12,7 +12,7 @@ import herdenmanagement.view.AckerView;
 public class HerdenManager
 {
 
-    private Acker acker;
+    public Acker acker;
     public Rindvieh rind;
 
 
