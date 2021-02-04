@@ -78,6 +78,7 @@ public class Steuerung
             @Override
             public void onClick(View v)
             {
+
                 if(herdenManager.rind.sichtbar)
                 {
                     herdenManager.acker.macheRindUnsichtbar(herdenManager.rind);

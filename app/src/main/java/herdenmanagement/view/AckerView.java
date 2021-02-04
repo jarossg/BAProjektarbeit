@@ -17,6 +17,7 @@ import java.beans.PropertyChangeListener;
 import herdenmanagement.model.Acker;
 import herdenmanagement.model.Eimer;
 import herdenmanagement.model.Gras;
+import herdenmanagement.model.Kot;
 import herdenmanagement.model.Rindvieh;
 
 /**
@@ -276,8 +277,24 @@ public class AckerView extends FrameLayout implements PropertyChangeListener {
         if (Acker.PROPERTY_GRAESER.equals(evt.getPropertyName())) {
             aktualisiereGraeser((Gras) evt.getOldValue(), (Gras) evt.getNewValue());
         }
+
+        if(Acker.PROPERTY_KOT.equals(evt.getPropertyName()))
+        {
+            aktualisiereKot((Kot) evt.getOldValue(), (Kot) evt.getNewValue());
+        }
     }
 
+
+    private void aktualisiereKot(final Kot oldValue, final Kot newValue)
+    {
+        if (newValue != null && oldValue == null) {
+            newValue.fuegeBeobachterHinzu(this);
+            addViewAmimated(new KotView(getContext(), animator, newValue), false);
+        } else if (newValue == null && oldValue != null) {
+            oldValue.entferneBeobachter(this);
+            removeViewAnimated(oldValue.gibId());
+        }
+    }
     /**
      * Aktualisiert die Ansicht für die Gräser. Für neue Objekte
      * (newValue != null && oldValue == null) wird eine View erzeugt.

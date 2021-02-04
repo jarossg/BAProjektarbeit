@@ -50,6 +50,10 @@ public class Acker extends BeobachtbaresElement {
      */
     public final static String PROPERTY_GRAESER = "herdenmanagement.model.Acker.graeser";
 
+    public final static String PROPERTY_KOT = "herdenmanagement.model.Acker.kot";
+
+    private List<Kot> kot;
+
     /**
      * Objekte der Klasse Rindvieh, die auf dem Acker unterwegs sind
      */
@@ -88,6 +92,7 @@ public class Acker extends BeobachtbaresElement {
         this.graeser = new ArrayList<>();
         this.eimer = new ArrayList<>();
         this.viecher = new ArrayList<>();
+        this.kot = new ArrayList<>();
     }
 
     /**
@@ -122,6 +127,16 @@ public class Acker extends BeobachtbaresElement {
         return gras;
     }
 
+    public Kot setzeKot(Position pos)
+    {
+        Kot k = new Kot();
+        k.positioniereDich(this, pos);
+        kot.add(k);
+
+        informiereBeobachter(PROPERTY_KOT, null, k);
+        return k;
+    }
+
     /**
      * Erzeugt an der Position eine Instanz von {@link Gras}.
      * <p>
@@ -153,8 +168,6 @@ public class Acker extends BeobachtbaresElement {
     }
     public void macheRindUnsichtbar(Rindvieh rind)
     {
-        //rind.setzeAcker(null);
-        //viecher.remove(rind);
         informiereBeobachter(PROPERTY_VIECHER, rind, null);
     }
     public void macheRindSichtbar(Rindvieh rind)

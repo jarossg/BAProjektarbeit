@@ -2,6 +2,7 @@ package herdenmanagement.model;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.util.List;
 
 import de.ba.herdenmanagement.R;
 
@@ -100,7 +101,10 @@ public class Rindvieh extends PositionsElement{
         this.milchImEuter = 0;
         this.richtung = RichtungsTyp.OST;
         this.sichtbar = true;
+
     }
+
+
 
     /**
      * @return Aktueller Status der Kuh, zum Beispiel {@link StatusTyp#FRISST}
@@ -371,6 +375,7 @@ public class Rindvieh extends PositionsElement{
             setMilchImEuter(messeMilchImEuter() + 1);
             gibAcker().entferneGras(gibPosition());
             setzeStatus(StatusTyp.WARTET);
+            gibAcker().setzeKot(gibPosition());
         } else {
             zeigeNachricht(R.string.rindvieh_kein_gras);
         }
