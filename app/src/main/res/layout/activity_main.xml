@@ -25,13 +25,13 @@
         android:id="@+id/fressen"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="48dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/buttonDescription"
         android:hapticFeedbackEnabled="true"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@+id/spawn"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/melken"
         app:layout_constraintTop_toTopOf="@+id/rauchen"
         app:srcCompat="@drawable/kuh_gras" />
 
@@ -54,13 +54,11 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="48dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/buttonDescription"
         android:hapticFeedbackEnabled="true"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@+id/spawn"
-        app:layout_constraintEnd_toStartOf="@+id/fressen"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/rauchen"
         app:srcCompat="@drawable/eimer" />
@@ -108,12 +106,12 @@
         android:id="@+id/links"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="48dp"
         android:contentDescription="@string/steuerkreuz"
         android:hapticFeedbackEnabled="true"
         android:rotation="180"
         app:layout_constraintBottom_toBottomOf="@+id/runter"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rechts"
         app:layout_constraintTop_toTopOf="@+id/hoch"
         app:srcCompat="@android:drawable/ic_media_play" />
 
@@ -121,13 +119,11 @@
         android:id="@+id/rechts"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginStart="48dp"
         android:layout_marginEnd="16dp"
         android:contentDescription="@string/steuerkreuz"
         android:hapticFeedbackEnabled="true"
         app:layout_constraintBottom_toBottomOf="@+id/runter"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toEndOf="@+id/links"
         app:layout_constraintTop_toTopOf="@+id/hoch"
         app:srcCompat="@android:drawable/ic_media_play" />
 
