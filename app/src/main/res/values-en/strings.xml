@@ -2,12 +2,12 @@
 <resources>
     <string name="app_name">BA Herdenmanagement</string>
     <string name="export">&lt;/&gt; Export</string>
-    <string name="rindvieh_nix_acker">There is no Acker</string>
-    <string name="rindvieh_vor_mir_kein_acker">In Front of me no Acker</string>
-    <string name="rindvieh_hinter_mir_kein_acker">Behind me no Acker</string>
-    <string name="rindvieh_kein_gras">has no Weed</string>
-    <string name="rindvieh_kein_eimer">has no Eimer</string>
-    <string name="rindvieh_erst_fressen">wants to eat first</string>
-    <string name="rindvieh_nix_zu_rauchen">can´t smoke</string>
+    <string name="rindvieh_vor_mir_kein_acker">%1$s is standing their and shaking her Head: In Front of me is no Acker!</string>
+    <string name="rindvieh_hinter_mir_kein_acker">%1$s is standing their and shaking her Head: Behind me is no Acker!</string>
+    <string name="rindvieh_kein_gras">%1$s is standing their and shaking her Head: There is no grass!</string>
+    <string name="rindvieh_kein_eimer">%1$s is standing their and shaking her Head: There is no bucket!</string>
+    <string name="rindvieh_erst_fressen">%1$s is standing their and shaking her Head: First i need to eat!</string>
+    <string name="rindvieh_nix_zu_rauchen">%1$s is standing their and shaking her Head: There is nothing to smoke!</string>
+    <string name="rindvieh_nix_acker">%1$s is screaming: There is no Acker</string>
     <string name="melken">%1$s stands there and gives milk</string>
 </resources>
