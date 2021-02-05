@@ -11,6 +11,7 @@
     <string name="rindvieh_nix_acker">%1$s is screaming: There is no Acker</string>
 
     <string name="melken">%1$s stands there and gives milk</string>
-     <string name="steuerkreuz"> Control Pad  </string>
+    <string name="steuerkreuz"> Control Pad  </string>
     <string name="switchText">Control Pad</string>
+    <string name="buttonDescription">Push me!</string>
 </resources>

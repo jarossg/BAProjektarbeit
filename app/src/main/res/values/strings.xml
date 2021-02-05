@@ -37,4 +37,9 @@
 
     <!-- Startbildschirm Switch-Element Text-->
     <string name="switchText">Steuerkreuz</string>
+
+    <!-- contentDescription im Layout -->
+    <string name="buttonDescription">Drück mich</string>
+
+    <string name="steuerkreuz">Drück mich</string>
 </resources>

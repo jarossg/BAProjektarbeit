@@ -33,7 +33,8 @@
         app:layout_constraintTop_toTopOf="@+id/melken"
         app:srcCompat="@drawable/kuh_gras"
         android:scaleType="centerCrop"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/buttonDescription"/>
 
     <ImageButton
         android:id="@+id/rauchen"
@@ -46,7 +47,8 @@
         app:layout_constraintTop_toTopOf="@+id/fressen"
         app:srcCompat="@drawable/kuh_rauch"
         android:scaleType="centerCrop"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/buttonDescription"/>
 
     <ImageButton
         android:id="@+id/melken"
@@ -60,7 +62,8 @@
         app:layout_constraintStart_toEndOf="@+id/fressen"
         app:srcCompat="@drawable/eimer"
         android:scaleType="centerCrop"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/buttonDescription"/>
 
     <ImageButton
         android:id="@+id/spawn"
@@ -73,6 +76,7 @@
         app:layout_constraintTop_toTopOf="@+id/rauchen"
         app:srcCompat="@drawable/kuh"
         android:scaleType="centerCrop"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/buttonDescription"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
