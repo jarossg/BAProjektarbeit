@@ -45,7 +45,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/spawn"
         app:layout_constraintTop_toTopOf="@+id/fressen"
-        app:srcCompat="@drawable/kuh_rauch"
+        app:srcCompat="@drawable/joint"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
         android:contentDescription="@string/buttonDescription"/>
