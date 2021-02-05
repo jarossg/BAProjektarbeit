@@ -49,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Steuerkreuz"
+        android:theme="@style/SwitchTheme"
         app:layout_constraintEnd_toEndOf="@+id/ueberschrift_startscreen"
         app:layout_constraintStart_toStartOf="@+id/ueberschrift_startscreen"
         app:layout_constraintTop_toBottomOf="@+id/ueberschrift_startscreen" />
