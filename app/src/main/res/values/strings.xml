@@ -37,5 +37,4 @@
 
     <!-- Startbildschirm Switch-Element Text-->
     <string name="switchText">Steuerkreuz</string>
-    <string name="steuerkreuz"> Steuerkreuz  </string>
 </resources>
