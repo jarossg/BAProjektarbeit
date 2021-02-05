@@ -25,7 +25,7 @@ import de.ba.herdenmanagement.R;
  * Eigenschaften, die beobachtet werden können sind die Nachrichten des PositionsElements
  * sowie {@link #richtung}, {@link #status} und {@link #milchImEuter}.
  */
-public class Rindvieh extends PositionsElement{
+public class Rindvieh extends PositionsElement {
 
     /**
      * Schlüssel zur Kommunikation mit einem {@link PropertyChangeListener}.
@@ -95,6 +95,7 @@ public class Rindvieh extends PositionsElement{
      * @param name Name der Kuh
      */
     public boolean sichtbar;
+
     public Rindvieh(String name) {
         this.name = name;
         this.status = StatusTyp.WARTET;
@@ -103,7 +104,6 @@ public class Rindvieh extends PositionsElement{
         this.sichtbar = true;
 
     }
-
 
 
     /**
@@ -242,8 +242,7 @@ public class Rindvieh extends PositionsElement{
         }
     }
 
-    private boolean gehtsDaWeiter(RichtungsTyp richtung)
-    {
+    private boolean gehtsDaWeiter(RichtungsTyp richtung) {
         Position position = gibPosition();
         switch (richtung) {
             case NORD:
@@ -266,12 +265,13 @@ public class Rindvieh extends PositionsElement{
                 return false;
         }
     }
+
     /**
      * Diese Methode ändert die Blickrichtung der Kuh. Um die neue Richtung zu verstehen, muss
      * man sich in die Position der Kuh versetzen. Blickt sie momentan nach
      * {@link RichtungsTyp#OST}, so wird sie nach dem Aufruf dieser Methoden nach
      * {@link RichtungsTyp#NORD} schauen.
-     *
+     * <p>
      * Die {@link #gibPosition()} der Kuh ändert sich durch die Drehbewegung nicht.
      */
     public void dreheDichLinksRum() {
@@ -292,7 +292,7 @@ public class Rindvieh extends PositionsElement{
      * man sich in die Position der Kuh versetzen. Blickt sie momentan nach
      * {@link RichtungsTyp#OST}, so wird sie nach dem Aufruf dieser Methoden nach
      * {@link RichtungsTyp#SUED} schauen.
-     *
+     * <p>
      * Die {@link #gibPosition()} der Kuh ändert sich durch die Drehbewegung nicht.
      */
     public void dreheDichRechtsRum() {
@@ -345,7 +345,7 @@ public class Rindvieh extends PositionsElement{
      * Kuh gemolken werden. Nach dem Melken ist die Anzahl in {@link #milchImEuter} natürlich 0.
      * Soll eine Kuh ohne Milch im Euter gemolken werden, wird auch eine Fehlernachricht mittels
      * {@link #setzeNachricht(String)} gespeichert.
-     *
+     * <p>
      * Die Oberserver werden über die Reduzierung der Milchmenge informiert. Zusätzlich wird
      * der Erfolg oder Nicht-Erfolg des melkens als Nachricht gespeichert.
      *
@@ -376,7 +376,7 @@ public class Rindvieh extends PositionsElement{
     }
 
     /**
-      * @return Name der Kuh
+     * @return Name der Kuh
      */
     public String gibName() {
         return name;
@@ -416,14 +416,15 @@ public class Rindvieh extends PositionsElement{
     public boolean gehtsDaWeiterZurueck() {
         return gehtsDaWeiter(false);
     }
-     public void bewegeRind(RichtungsTyp richtung) {
+
+    public void bewegeRind(RichtungsTyp richtung) {
         if (richtung.equals(this.gibRichtung())) {
             this.geheVor();
         } else {
-            if(((richtung==RichtungsTyp.NORD)&&(this.gibRichtung()==RichtungsTyp.SUED))||((richtung==RichtungsTyp.SUED)&&(this.gibRichtung()==RichtungsTyp.NORD))||((richtung==RichtungsTyp.WEST)&&(this.gibRichtung()==RichtungsTyp.OST))||((richtung==RichtungsTyp.OST)&&(this.gibRichtung()==RichtungsTyp.WEST))){
+            if (((richtung == RichtungsTyp.NORD) && (this.gibRichtung() == RichtungsTyp.SUED)) || ((richtung == RichtungsTyp.SUED) && (this.gibRichtung() == RichtungsTyp.NORD)) || ((richtung == RichtungsTyp.WEST) && (this.gibRichtung() == RichtungsTyp.OST)) || ((richtung == RichtungsTyp.OST) && (this.gibRichtung() == RichtungsTyp.WEST))) {
                 this.dreheDichRechtsRum();
                 this.dreheDichRechtsRum();
-            }else {
+            } else {
                 this.setRichtung(richtung);
             }
         }

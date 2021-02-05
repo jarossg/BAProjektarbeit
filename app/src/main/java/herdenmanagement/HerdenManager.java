@@ -1,7 +1,5 @@
 package herdenmanagement;
 
-import android.view.View;
-
 import de.ba.herdenmanagement.R;
 import herdenmanagement.model.Acker;
 import herdenmanagement.model.Position;
@@ -13,8 +11,11 @@ public class HerdenManager
 {
 
     public Acker acker;
-    public Rindvieh rind;
+    private Rindvieh rind;
 
+    public Rindvieh getRind() {
+        return rind;
+    }
 
     public void richteAckerEin(MainActivity mainActivity)
     {
@@ -39,11 +40,14 @@ public class HerdenManager
 
     public void manageHerde(final MainActivity mainActivity)
     {
-        rind = new Rindvieh("rind");
-        acker.lassRindWeiden(rind);
+        setRind(new Rindvieh("Eugene"));
+        acker.lassRindWeiden(getRind());
         //rind.raucheGras();
 
 
     }
-    
+
+    public void setRind(Rindvieh rind) {
+        this.rind = rind;
+    }
 }

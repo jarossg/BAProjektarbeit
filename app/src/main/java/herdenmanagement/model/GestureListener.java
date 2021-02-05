@@ -5,11 +5,10 @@ import android.view.MotionEvent;
 
 import herdenmanagement.HerdenManager;
 
-public class GestureListener extends GestureDetector.SimpleOnGestureListener
-{
+public class GestureListener extends GestureDetector.SimpleOnGestureListener {
     private HerdenManager herdenManager;
-    public GestureListener(HerdenManager manager)
-    {
+
+    public GestureListener(HerdenManager manager) {
         herdenManager = manager;
     }
 
@@ -19,17 +18,17 @@ public class GestureListener extends GestureDetector.SimpleOnGestureListener
         float abstandY = e2.getY() - e1.getY();
         float abstandX = e2.getX() - e1.getX();
 
-        if(Math.abs(abstandX)>Math.abs(abstandY)){
-            if(abstandX>0){
-                herdenManager.rind.bewegeRind(Rindvieh.RichtungsTyp.OST);
-            }else{
-                herdenManager.rind.bewegeRind(Rindvieh.RichtungsTyp.WEST);
+        if (Math.abs(abstandX) > Math.abs(abstandY)) {
+            if (abstandX > 0) {
+                herdenManager.getRind().bewegeRind(Rindvieh.RichtungsTyp.OST);
+            } else {
+                herdenManager.getRind().bewegeRind(Rindvieh.RichtungsTyp.WEST);
             }
-        }else{
-            if(abstandY>0){
-                herdenManager.rind.bewegeRind(Rindvieh.RichtungsTyp.SUED);
-            }else{
-                herdenManager.rind.bewegeRind(Rindvieh.RichtungsTyp.NORD);
+        } else {
+            if (abstandY > 0) {
+                herdenManager.getRind().bewegeRind(Rindvieh.RichtungsTyp.SUED);
+            } else {
+                herdenManager.getRind().bewegeRind(Rindvieh.RichtungsTyp.NORD);
             }
         }
         //etwas machen

@@ -28,6 +28,14 @@
     <!-- Meldung die erschein, wenn das Rindvieh Milch gibt-->
     <string name="melken">%1$s steht da und gibt Milch</string>
 
+
+
+    <!-- Andere Texte-->
+
+    <!-- Startbildschirm Überschrift-->
     <string name="ueberschrift" translatable="false"> Emulator</string>
+
+    <!-- Startbildschirm Switch-Element Text-->
+    <string name="switchText">Steuerkreuz</string>
     <string name="steuerkreuz"> Steuerkreuz  </string>
 </resources>
