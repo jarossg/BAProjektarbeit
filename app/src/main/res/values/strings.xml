@@ -3,14 +3,30 @@
     <string name="export">&lt;/&gt; Export</string>
 
     <!-- Nachrichten des Rindviehs -->
+
+    <!-- Meldung bei Fehler mit Acker-->
     <string name="rindvieh_nix_acker">%1$s brüllt wie am Spieß: Da ist kein Acker!</string>
+
+    <!-- Meldung die erscheint, wenn ein Rindvieh beim vorgehen, auf ein nicht vorhandenes Feld gehen soll -->
     <string name="rindvieh_vor_mir_kein_acker">%1$s steht da und schüttelt den Kopf: Vor mir ist kein Acker!</string>
+
+    <!-- Meldung die erscheint, wenn ein Rindvieh beim Rüchwärtsgehen, auf ein nicht vorhandenes Ackerfeld gehen-->
     <string name="rindvieh_hinter_mir_kein_acker">%1$s steht da und schüttelt den Kopf: Hinter mir ist kein Acker!</string>
+
+    <!-- Meldung die erscheint, wenn der Befehl zum Gras fressen kommt, aber kein Gras auf dem eigenen Feld ist -->
     <string name="rindvieh_kein_gras">%1$s steht da und schüttelt den Kopf: Da ist gar kein Gras!</string>
+
+    <!-- Meldung die erscheint, wenn der Befehl zum Milch geben kommt, aber auf dem eigenen Feld(Position) kein Eimer steht-->
     <string name="rindvieh_kein_eimer">%1$s steht da und schüttelt den Kopf: Da steht kein Eimer!</string>
+
+    <!-- Meldung die erscheint, wenn der Befehl zum Milch geben kommt, aber keine milchImEuter ist-->
     <string name="rindvieh_erst_fressen">%1$s steht da und schüttelt den Kopf: Ich muss erst fressen!</string>
+
+    <!-- Meldung die erscheint, wenn er Befehl zum Gras rauchen kommt, aber kein Gras auf dem eigenen Feld(Position) ist -->
     <string name="rindvieh_nix_zu_rauchen">%1$s steht da und schüttelt den Kopf: Hier ist nix zu rauchen!</string>
-    <string name="ueberschrift" translatable="false">Emuhlator</string>
 
+    <!-- Meldung die erschein, wenn das Rindvieh Milch gibt-->
+    <string name="melken">%1$s steht da und gibt Milch</string>
 
+    <string name="ueberschrift" translatable="false"> Emulator</string>
 </resources>
