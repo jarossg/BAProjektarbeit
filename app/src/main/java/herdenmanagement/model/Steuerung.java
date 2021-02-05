@@ -60,12 +60,12 @@ public class Steuerung {
             @Override
             public void onClick(View v) {
 
-                if (herdenManager.getRind().sichtbar) {
+                if (herdenManager.getRind().getSichtbarkeit()) {
                     herdenManager.acker.macheRindUnsichtbar(herdenManager.getRind());
-                    herdenManager.getRind().sichtbar = false;
+                    herdenManager.getRind().setSichtbarkeit(false);
                 } else {
                     herdenManager.acker.macheRindSichtbar(herdenManager.getRind());
-                    herdenManager.getRind().sichtbar = true;
+                    herdenManager.getRind().setSichtbarkeit(true);
                 }
 
             }
