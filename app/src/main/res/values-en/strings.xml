@@ -10,4 +10,5 @@
     <string name="rindvieh_nix_zu_rauchen">%1$s is standing their and shaking her Head: There is nothing to smoke!</string>
     <string name="rindvieh_nix_acker">%1$s is screaming: There is no Acker</string>
     <string name="melken">%1$s stands there and gives milk</string>
+     <string name="steuerkreuz"> Control Pad  </string>
 </resources>
