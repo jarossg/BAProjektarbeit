@@ -241,48 +241,7 @@ public class Rindvieh extends PositionsElement{
             zeigeNachricht(R.string.rindvieh_hinter_mir_kein_acker);
         }
     }
-
-
-    public void geheHoch()
-    {
-        Position pos = gibPosition();
-        pos.y = pos.y - 1;
-       if (gehtsDaWeiter(RichtungsTyp.NORD))
-       {
-           setzePosition(pos);
-       }
-    }
-
-    public void geheRunter()
-    {
-        Position pos = gibPosition();
-        pos.y = pos.y + 1;
-        if (gehtsDaWeiter(RichtungsTyp.SUED))
-        {
-            setzePosition(pos);
-        }
-    }
-
-    public void geheRechts()
-    {
-        Position pos = gibPosition();
-        pos.x = pos.x + 1;
-        if (gehtsDaWeiter(RichtungsTyp.OST))
-        {
-            setzePosition(pos);
-        }
-    }
-
-    public void geheLinks()
-    {
-        Position pos = gibPosition();
-        pos.x = pos.x - 1;
-        if (gehtsDaWeiter(RichtungsTyp.WEST))
-        {
-            setzePosition(pos);
-        }
-    }
-
+    
     private boolean gehtsDaWeiter(RichtungsTyp richtung)
     {
         Position position = gibPosition();

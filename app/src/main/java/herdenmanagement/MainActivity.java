@@ -24,7 +24,6 @@ import herdenmanagement.view.Animator;
 
 public class MainActivity extends AppCompatActivity
 {
-
     private static final String DEBUG_TAG = "Debug";
     public HerdenManager herdenManager;
 
@@ -38,20 +37,37 @@ public class MainActivity extends AppCompatActivity
     private ImageButton fressen;
     private ImageButton spawn;
 
+    private boolean Steuerkreuz;
+
     private GestureDetectorCompat mGestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        Bundle b = getIntent().getExtras();
+        Steuerkreuz = b.getBoolean("Steuerkreuz");
+        if(Steuerkreuz)
+        {
+            setContentView(R.layout.activity_main);
+        }
+        else
+        {
+            setContentView(R.layout.activity_main_ohne_buttons);
+        }
+
+
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event)
     {
-        mGestureDetector.onTouchEvent(event);
-        return super.onTouchEvent(event);
+        if(!Steuerkreuz)
+        {
+            mGestureDetector.onTouchEvent(event);
+            return super.onTouchEvent(event);
+        }
+    return false;
     }
 
     protected void onStart()
@@ -87,8 +103,11 @@ public class MainActivity extends AppCompatActivity
         }).start();
 
         initializeButtons();
+        if(!Steuerkreuz)
+        {
+            mGestureDetector = new GestureDetectorCompat(this, (GestureDetector.OnGestureListener) new GestureListener(herdenManager));
+        }
 
-        mGestureDetector = new GestureDetectorCompat(this, (GestureDetector.OnGestureListener) new GestureListener(herdenManager));
     }
 
 
@@ -123,17 +142,22 @@ public class MainActivity extends AppCompatActivity
 
     void initializeButtons()
     {
-        hoch = findViewById(R.id.hoch);
-        runter = findViewById(R.id.runter);
-        rechts = findViewById(R.id.rechts);
-        links = findViewById(R.id.links);
+        if(Steuerkreuz)
+        {
+            hoch = findViewById(R.id.hoch);
+            runter = findViewById(R.id.runter);
+            rechts = findViewById(R.id.rechts);
+            links = findViewById(R.id.links);
+
+            Steuerung.Bewegung(hoch, runter, rechts, links, herdenManager);
+        }
 
         rauchen = findViewById(R.id.rauchen);
         melken = findViewById(R.id.melken);
         fressen = findViewById(R.id.fressen);
         spawn = findViewById(R.id.spawn);
 
-        Steuerung.Bewegung(hoch, runter, rechts, links, herdenManager);
+
         Steuerung.Management(rauchen, melken, fressen, spawn, herdenManager);
     }
 }
