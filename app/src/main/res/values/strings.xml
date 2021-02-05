@@ -33,7 +33,7 @@
     <!-- Andere Texte-->
 
     <!-- Startbildschirm Überschrift-->
-    <string name="ueberschrift" translatable="false"> Emulator</string>
+    <string name="ueberschrift" translatable="false"> Emuhlator</string>
 
     <!-- Startbildschirm Switch-Element Text-->
     <string name="switchText">Steuerkreuz</string>
