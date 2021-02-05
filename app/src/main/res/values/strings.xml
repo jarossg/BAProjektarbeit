@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Emuhlator</string>
+    <string name="app_name">BA Herdenmanagement</string>
     <string name="export">&lt;/&gt; Export</string>
 
     <!-- Nachrichten des Rindviehs -->
@@ -10,7 +10,7 @@
     <string name="rindvieh_kein_eimer">%1$s steht da und schüttelt den Kopf: Da steht kein Eimer!</string>
     <string name="rindvieh_erst_fressen">%1$s steht da und schüttelt den Kopf: Ich muss erst fressen!</string>
     <string name="rindvieh_nix_zu_rauchen">%1$s steht da und schüttelt den Kopf: Hier ist nix zu rauchen!</string>
-    <string name="ueberschrift" translatable="false">Emuhlator</string>
+    <string name="ueberschrift" translatable="false">Herdenmanager</string>
 
 
 </resources>

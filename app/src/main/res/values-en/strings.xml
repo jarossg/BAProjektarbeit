@@ -9,4 +9,5 @@
     <string name="rindvieh_kein_eimer">has no Eimer</string>
     <string name="rindvieh_erst_fressen">wants to eat first</string>
     <string name="rindvieh_nix_zu_rauchen">can´t smoke</string>
+    <string name="melken">%1$s stands there and gives milk</string>
 </resources>

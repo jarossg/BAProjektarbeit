@@ -241,7 +241,7 @@ public class Rindvieh extends PositionsElement{
             zeigeNachricht(R.string.rindvieh_hinter_mir_kein_acker);
         }
     }
-    
+
     private boolean gehtsDaWeiter(RichtungsTyp richtung)
     {
         Position position = gibPosition();
@@ -356,6 +356,7 @@ public class Rindvieh extends PositionsElement{
 
         if (gibAcker().istDaEinEimer(gibPosition())) {
             if (istMilchImEuter()) {
+                zeigeNachricht(R.string.melken);
                 setMilchImEuter(0);
             } else {
                 zeigeNachricht(R.string.rindvieh_erst_fressen);
