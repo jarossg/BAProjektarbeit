@@ -1,4 +1,145 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="herdenmanagement.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <herdenmanagement.view.AckerView
+        android:id="@+id/acker_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="96dp"
+        app:layout_constraintBottom_toTopOf="@+id/rauchen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/fressen"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/buttonDescription"
+        android:hapticFeedbackEnabled="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/spawn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rauchen"
+        app:srcCompat="@drawable/kuh_gras" />
+
+    <ImageButton
+        android:id="@+id/rauchen"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="48dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/buttonDescription"
+        android:hapticFeedbackEnabled="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/spawn"
+        app:layout_constraintEnd_toEndOf="@+id/fressen"
+        app:layout_constraintStart_toStartOf="@+id/melken"
+        app:srcCompat="@drawable/joint" />
+
+    <ImageButton
+        android:id="@+id/melken"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="48dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/buttonDescription"
+        android:hapticFeedbackEnabled="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/spawn"
+        app:layout_constraintEnd_toStartOf="@+id/fressen"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/rauchen"
+        app:srcCompat="@drawable/eimer" />
+
+    <ImageButton
+        android:id="@+id/spawn"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="48dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/buttonDescription"
+        android:hapticFeedbackEnabled="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fressen"
+        app:layout_constraintStart_toStartOf="@+id/melken"
+        app:srcCompat="@drawable/kuh" />
+
+    <ImageButton
+        android:id="@+id/hoch"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="48dp"
+        android:contentDescription="@string/steuerkreuz"
+        android:hapticFeedbackEnabled="true"
+        android:rotation="-90"
+        app:layout_constraintBottom_toTopOf="@+id/runter"
+        app:layout_constraintEnd_toEndOf="@+id/rechts"
+        app:layout_constraintStart_toStartOf="@+id/links"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageButton
+        android:id="@+id/runter"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="@string/steuerkreuz"
+        android:hapticFeedbackEnabled="true"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/spawn"
+        app:layout_constraintEnd_toEndOf="@+id/rechts"
+        app:layout_constraintStart_toStartOf="@+id/links"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageButton
+        android:id="@+id/links"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/steuerkreuz"
+        android:hapticFeedbackEnabled="true"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@+id/runter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hoch"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageButton
+        android:id="@+id/rechts"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/steuerkreuz"
+        android:hapticFeedbackEnabled="true"
+        app:layout_constraintBottom_toBottomOf="@+id/runter"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/links"
+        app:layout_constraintTop_toTopOf="@+id/hoch"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
