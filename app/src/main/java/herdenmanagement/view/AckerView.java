@@ -221,14 +221,7 @@ public class AckerView extends FrameLayout implements PropertyChangeListener {
                             (y + 1) * rowHeight - 8,
                             PAINT);
 
-                    // textgröße berechnen und Text zentriert zeichnen
-                    String text = x + ":" + y;
-                    TEXT_PAINT.getTextBounds(text, 0, text.length(), TEXT_RECT);
-                    canvas.drawText(
-                            text,
-                            ((x + 0.5f) * columnWidth) - (TEXT_RECT.width() / 2.0f),
-                            ((y + 0.5f) * rowHeight) + (TEXT_RECT.height() / 2.0f),
-                            TEXT_PAINT);
+
                 }
             }
         }
