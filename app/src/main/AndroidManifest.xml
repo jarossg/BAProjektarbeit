@@ -23,6 +23,7 @@
         </activity>
         <activity
             android:name="herdenmanagement.MainActivity"
+            android:screenOrientation="portrait"
             android:launchMode="singleTask">
 
         </activity>
