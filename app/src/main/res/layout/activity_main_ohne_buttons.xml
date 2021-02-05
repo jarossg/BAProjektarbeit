@@ -10,57 +10,61 @@
 
     <herdenmanagement.view.AckerView
         android:id="@+id/acker_view"
-        android:layout_width="376dp"
-        android:layout_height="563dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/melken"
         app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/fressen"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:hapticFeedbackEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintEnd_toStartOf="@+id/melken"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/rauchen"
-        app:layout_constraintTop_toTopOf="@+id/rauchen"
+        app:layout_constraintTop_toTopOf="@+id/melken"
         app:srcCompat="@drawable/kuh_gras" />
 
     <ImageButton
         android:id="@+id/rauchen"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginStart="44dp"
         android:hapticFeedbackEnabled="true"
+        app:layout_constraintEnd_toStartOf="@+id/fressen"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/spawn"
-        app:layout_constraintTop_toTopOf="@+id/spawn"
+        app:layout_constraintTop_toTopOf="@+id/fressen"
         app:srcCompat="@drawable/kuh_rauch" />
 
     <ImageButton
         android:id="@+id/melken"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginBottom="32dp"
         android:hapticFeedbackEnabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acker_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fressen"
         app:srcCompat="@drawable/eimer" />
 
     <ImageButton
         android:id="@+id/spawn"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginStart="24dp"
         android:hapticFeedbackEnabled="true"
-        app:layout_constraintStart_toEndOf="@+id/melken"
-        app:layout_constraintTop_toTopOf="@+id/melken"
+        app:layout_constraintEnd_toStartOf="@+id/rauchen"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rauchen"
         app:srcCompat="@drawable/kuh" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
