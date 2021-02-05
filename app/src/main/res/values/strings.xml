@@ -10,5 +10,6 @@
     <string name="rindvieh_kein_eimer">%1$s steht da und schüttelt den Kopf: Da steht kein Eimer!</string>
     <string name="rindvieh_erst_fressen">%1$s steht da und schüttelt den Kopf: Ich muss erst fressen!</string>
     <string name="rindvieh_nix_zu_rauchen">%1$s steht da und schüttelt den Kopf: Hier ist nix zu rauchen!</string>
+    <string name="ueberschrift">Herdenmanager</string>
 
 </resources>
