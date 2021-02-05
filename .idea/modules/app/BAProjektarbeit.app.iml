@@ -35,7 +35,9 @@
       <sourceFolder url="file://$USER_HOME$/AppData/Local/Temp/BAProjektarbeit/app/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
     </content>
     <content url="file://$USER_HOME$/AppData/Local/Temp/BAProjektarbeit/app/generated/ap_generated_sources/debugAndroidTest/out" />
-    <content url="file://$USER_HOME$/AppData/Local/Temp/BAProjektarbeit/app/generated/ap_generated_sources/debugUnitTest/out" />
+    <content url="file://$USER_HOME$/AppData/Local/Temp/BAProjektarbeit/app/generated/ap_generated_sources/debugUnitTest/out">
+      <sourceFolder url="file://$USER_HOME$/AppData/Local/Temp/BAProjektarbeit/app/generated/ap_generated_sources/debugUnitTest/out" isTestSource="true" generated="true" />
+    </content>
     <content url="file://$USER_HOME$/AppData/Local/Temp/BAProjektarbeit/app/generated/renderscript_source_output_dir/debug/out" />
     <content url="file://$USER_HOME$/AppData/Local/Temp/BAProjektarbeit/app/generated/renderscript_source_output_dir/debugAndroidTest/out" />
     <content url="file://$USER_HOME$/AppData/Local/Temp/BAProjektarbeit/app/generated/res/resValues/androidTest/debug" />

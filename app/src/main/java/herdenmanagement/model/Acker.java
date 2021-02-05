@@ -235,6 +235,18 @@ public class Acker extends BeobachtbaresElement {
         return false;
     }
 
+    public boolean istDaKot(Position position)
+    {
+        for(Kot kot : kot)
+        {
+            if(kot.gibPosition().equals(position))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     /**
      * Kühe können mit {@link Rindvieh#frissGras()} Gras fressen oder
      * mit {@link Rindvieh#raucheGras()} Gras rauchen.
