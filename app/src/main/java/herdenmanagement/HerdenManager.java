@@ -4,6 +4,7 @@ import de.ba.herdenmanagement.R;
 import herdenmanagement.model.Acker;
 import herdenmanagement.model.Position;
 import herdenmanagement.model.Rindvieh;
+import herdenmanagement.model.SteuerRindvieh;
 import herdenmanagement.view.AckerView;
 
 
@@ -11,11 +12,7 @@ public class HerdenManager
 {
 
     public Acker acker;
-    private Rindvieh rind;
-
-    public Rindvieh getRind() {
-        return rind;
-    }
+    private SteuerRindvieh rind;
 
     public void richteAckerEin(MainActivity mainActivity)
     {
@@ -40,14 +37,18 @@ public class HerdenManager
 
     public void manageHerde(final MainActivity mainActivity)
     {
-        setRind(new Rindvieh("Eugene"));
+        setRind(new SteuerRindvieh("Eugene"));
         acker.lassRindWeiden(getRind());
         //rind.raucheGras();
 
 
     }
 
-    public void setRind(Rindvieh rind) {
+    public void setRind(SteuerRindvieh rind) {
         this.rind = rind;
+    }
+
+    public SteuerRindvieh getRind() {
+        return rind;
     }
 }

@@ -417,6 +417,7 @@ public class Rindvieh extends PositionsElement {
         return gehtsDaWeiter(false);
     }
 
+    /**
     public void bewegeRind(RichtungsTyp richtung) {
         if (richtung.equals(this.gibRichtung())) {
             this.geheVor();
@@ -428,5 +429,5 @@ public class Rindvieh extends PositionsElement {
                 this.setRichtung(richtung);
             }
         }
-    }
+    }**/
 }
