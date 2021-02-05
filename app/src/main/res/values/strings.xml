@@ -28,5 +28,7 @@
     <!-- Meldung die erschein, wenn das Rindvieh Milch gibt-->
     <string name="melken">%1$s steht da und gibt Milch</string>
 
-    <string name="ueberschrift" translatable="false"> Emulator</string>
+    <string name="ueberschrift" translatable="false"> Emuhlator</string>
+
+    <string name="steuerkreuz"> Steuerkreuz  </string>
 </resources>
