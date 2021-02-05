@@ -30,7 +30,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/spawn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/rauchen"
-        app:srcCompat="@drawable/kuh_gras" />
+        app:srcCompat="@drawable/kuh_gras"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
 
     <ImageButton
         android:id="@+id/rauchen"
@@ -41,7 +43,9 @@
         app:layout_constraintBottom_toTopOf="@+id/spawn"
         app:layout_constraintEnd_toEndOf="@+id/fressen"
         app:layout_constraintStart_toStartOf="@+id/melken"
-        app:srcCompat="@drawable/kuh_rauch" />
+        app:srcCompat="@drawable/joint"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
 
     <ImageButton
         android:id="@+id/melken"
@@ -52,7 +56,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/spawn"
         app:layout_constraintEnd_toStartOf="@+id/fressen"
         app:layout_constraintTop_toTopOf="@+id/rauchen"
-        app:srcCompat="@drawable/eimer" />
+        app:srcCompat="@drawable/eimer"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
 
     <ImageButton
         android:id="@+id/spawn"
@@ -63,7 +69,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/fressen"
         app:layout_constraintStart_toStartOf="@+id/melken"
-        app:srcCompat="@drawable/kuh" />
+        app:srcCompat="@drawable/kuh"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
 
     <ImageButton
         android:id="@+id/hoch"
@@ -71,20 +79,22 @@
         android:layout_height="64dp"
         android:layout_marginBottom="48dp"
         android:hapticFeedbackEnabled="true"
+        android:rotation="-90"
         app:layout_constraintBottom_toTopOf="@+id/runter"
         app:layout_constraintEnd_toEndOf="@+id/rechts"
         app:layout_constraintStart_toStartOf="@+id/links"
-        app:srcCompat="@android:drawable/arrow_up_float" />
+        app:srcCompat="@android:drawable/ic_media_play" />
 
     <ImageButton
         android:id="@+id/runter"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:hapticFeedbackEnabled="true"
+        android:rotation="90"
         app:layout_constraintBottom_toBottomOf="@+id/spawn"
         app:layout_constraintEnd_toEndOf="@+id/rechts"
         app:layout_constraintStart_toStartOf="@+id/links"
-        app:srcCompat="@android:drawable/arrow_down_float" />
+        app:srcCompat="@android:drawable/ic_media_play" />
 
     <ImageButton
         android:id="@+id/links"
@@ -92,10 +102,11 @@
         android:layout_height="64dp"
         android:layout_marginStart="16dp"
         android:hapticFeedbackEnabled="true"
+        android:rotation="180"
         app:layout_constraintBottom_toBottomOf="@+id/runter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/hoch"
-        app:srcCompat="?attr/homeAsUpIndicator" />
+        app:srcCompat="@android:drawable/ic_media_play" />
 
     <ImageButton
         android:id="@+id/rechts"
