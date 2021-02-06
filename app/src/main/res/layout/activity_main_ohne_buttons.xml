@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context="herdenmanagement.MainActivity"
     tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="81dp"
+    android:background="@color/colorPrimaryDark">
 
     <herdenmanagement.view.AckerView
         android:id="@+id/acker_view"
@@ -20,7 +21,8 @@
         app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary"/>
 
     <ImageButton
         android:id="@+id/fressen"
