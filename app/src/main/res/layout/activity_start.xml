@@ -12,6 +12,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_corner_button"
+        android:contentDescription="@string/buttonDescription"
         app:layout_constraintEnd_toEndOf="@+id/schalter"
         app:layout_constraintStart_toStartOf="@+id/schalter"
         app:layout_constraintTop_toBottomOf="@+id/schalter"
@@ -36,6 +37,7 @@
         android:layout_width="314dp"
         android:layout_height="578dp"
         android:layout_marginTop="128dp"
+        android:contentDescription="@string/ueberschrift"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/changeLayoutButton"
         app:layout_constraintHorizontal_bias="0.509"
@@ -52,7 +54,8 @@
         android:theme="@style/SwitchTheme"
         app:layout_constraintEnd_toEndOf="@+id/ueberschrift_startscreen"
         app:layout_constraintStart_toStartOf="@+id/ueberschrift_startscreen"
-        app:layout_constraintTop_toBottomOf="@+id/ueberschrift_startscreen" />
+        app:layout_constraintTop_toBottomOf="@+id/ueberschrift_startscreen"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
