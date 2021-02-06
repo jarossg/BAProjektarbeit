@@ -8,14 +8,12 @@ import herdenmanagement.model.SteuerRindvieh;
 import herdenmanagement.view.AckerView;
 
 
-public class HerdenManager
-{
+public class HerdenManager {
 
     public Acker acker;
     private SteuerRindvieh rind;
 
-    public void richteAckerEin(MainActivity mainActivity)
-    {
+    public void richteAckerEin(MainActivity mainActivity) {
         // Die View, die die Acker Elememnte anzeigen kann, wird in der Datei
         // res/activity_main.xml optisch ausgerichtet und in der App platziert
         AckerView ackerView = mainActivity.findViewById(R.id.acker_view);
@@ -35,20 +33,16 @@ public class HerdenManager
         acker.lassGrasWachsen(new Position(3, 4));
     }
 
-    public void manageHerde(final MainActivity mainActivity)
-    {
-        setRind(new SteuerRindvieh("Eugene"));
-        acker.lassRindWeiden(getRind());
-        //rind.raucheGras();
-
-
+    public void manageHerde(final MainActivity mainActivity) {
+        setRind(new SteuerRindvieh("Eugene")); //Erzeuge Steuerrind
+        acker.lassRindWeiden(getRind()); //setze Rind auf Weide
     }
 
     public void setRind(SteuerRindvieh rind) {
-        this.rind = rind;
+        this.rind = rind;//setze das aktuelle Rind
     }
 
     public SteuerRindvieh getRind() {
-        return rind;
+        return rind; //Gebe das aktuelle Rind zurück
     }
 }

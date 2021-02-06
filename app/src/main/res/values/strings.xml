@@ -41,5 +41,5 @@
     <!-- contentDescription im Layout -->
     <string name="buttonDescription">Drück mich</string>
 
-    <string name="steuerkreuz">Drück mich</string>
+    <string name="steuerkreuz">Steuerkreuz</string>
 </resources>

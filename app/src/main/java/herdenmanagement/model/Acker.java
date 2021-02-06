@@ -50,9 +50,9 @@ public class Acker extends BeobachtbaresElement {
      */
     public final static String PROPERTY_GRAESER = "herdenmanagement.model.Acker.graeser";
 
-    public final static String PROPERTY_KOT = "herdenmanagement.model.Acker.kot";
+    public final static String PROPERTY_KOT = "herdenmanagement.model.Acker.kot"; //Schlüssel für den PropertyChangeListener
 
-    private List<Kot> kot;
+    private List<Kot> kot; //Liste mit Kot
 
     /**
      * Objekte der Klasse Rindvieh, die auf dem Acker unterwegs sind
@@ -92,7 +92,7 @@ public class Acker extends BeobachtbaresElement {
         this.graeser = new ArrayList<>();
         this.eimer = new ArrayList<>();
         this.viecher = new ArrayList<>();
-        this.kot = new ArrayList<>();
+        this.kot = new ArrayList<>(); //erzeuge eine Liste für den Kot
     }
 
     /**
@@ -127,13 +127,12 @@ public class Acker extends BeobachtbaresElement {
         return gras;
     }
 
-    public Kot setzeKot(Position pos)
-    {
-        Kot k = new Kot();
-        k.positioniereDich(this, pos);
-        kot.add(k);
+    public Kot setzeKot(Position pos) {
+        Kot k = new Kot(); //erzeuge Kotobjekt
+        k.positioniereDich(this, pos); //positioniere den Kot auf dem Acker
+        kot.add(k);//füge den Kot zur Liste hinzu
 
-        informiereBeobachter(PROPERTY_KOT, null, k);
+        informiereBeobachter(PROPERTY_KOT, null, k); //informiere den PorpertyChangeListener mit dem Schlüssel "PROPERTY_KOT" dem alten Wert null und dem neuen Wert k
         return k;
     }
 
@@ -166,13 +165,13 @@ public class Acker extends BeobachtbaresElement {
 
         informiereBeobachter(PROPERTY_VIECHER, null, rind);
     }
-    public void macheRindUnsichtbar(Rindvieh rind)
-    {
-        informiereBeobachter(PROPERTY_VIECHER, rind, null);
+
+    public void macheRindUnsichtbar(Rindvieh rind) {
+        informiereBeobachter(PROPERTY_VIECHER, rind, null);//benachrichtige den PropertyChangeListener dass er das Rind nicht mehr zeichnen muss
     }
-    public void macheRindSichtbar(Rindvieh rind)
-    {
-        informiereBeobachter(PROPERTY_VIECHER, null, rind);
+
+    public void macheRindSichtbar(Rindvieh rind) {
+        informiereBeobachter(PROPERTY_VIECHER, null, rind);//benachrichtige den PropertyChangeListener dass er das Rind zeichnen muss
     }
 
     /**
@@ -235,12 +234,12 @@ public class Acker extends BeobachtbaresElement {
         return false;
     }
 
-    public boolean istDaKot(Position position)
-    {
-        for(Kot kot : kot)
-        {
-            if(kot.gibPosition().equals(position))
-            {
+    public boolean istDaKot(Position position) {
+        //gib zurück ob an der Position Kot ist
+        for (Kot kot : kot) {
+            //iteriere über die Kotliste
+            if (kot.gibPosition().equals(position)) {
+                //gib true zurück, wenn die Position eines Kotobjektes mit der übergebenen Position übereinstimmt
                 return true;
             }
         }

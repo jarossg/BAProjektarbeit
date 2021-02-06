@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GestureDetectorCompat;
 import androidx.core.view.MotionEventCompat;
@@ -22,8 +23,7 @@ import herdenmanagement.view.AckerView;
 import herdenmanagement.view.Animator;
 
 
-public class MainActivity extends AppCompatActivity
-{
+public class MainActivity extends AppCompatActivity {
     private static final String DEBUG_TAG = "Debug";
     public HerdenManager herdenManager;
 
@@ -42,17 +42,16 @@ public class MainActivity extends AppCompatActivity
     private GestureDetectorCompat mGestureDetector;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Bundle b = getIntent().getExtras();
+
+        Bundle b = getIntent().getExtras(); //aktivieren des Steuerkreuzes
+        assert b != null;
         Steuerkreuz = b.getBoolean("Steuerkreuz");
-        if(Steuerkreuz)
-        {
+        //Auswahl des passenden Layouts
+        if (Steuerkreuz) {
             setContentView(R.layout.activity_main);
-        }
-        else
-        {
+        } else {
             setContentView(R.layout.activity_main_ohne_buttons);
         }
 
@@ -60,28 +59,24 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event)
-    {
-        if(!Steuerkreuz)
-        {
+    public boolean onTouchEvent(MotionEvent event) {
+        //Event das beim Wischen die Kuh bewegt
+        if (!Steuerkreuz) {
             mGestureDetector.onTouchEvent(event);
             return super.onTouchEvent(event);
         }
-    return false;
+        return false;
     }
 
-    protected void onStart()
-    {
+    protected void onStart() {
         super.onStart();
 
         // erzeugt einen HerdenManager
         herdenManager = new HerdenManager();
 
-        new Thread(new Runnable()
-        {
+        new Thread(new Runnable() {
             @Override
-            public void run()
-            {
+            public void run() {
                 // Während manageHerde möchten wir alle Aktionen sehen
                 AckerView ackerView = findViewById(R.id.acker_view);
 
@@ -102,8 +97,8 @@ public class MainActivity extends AppCompatActivity
             }
         }).start();
 
-        initializeButtons();
-        if(!Steuerkreuz)
+        initializeButtons(); //initialisieren der Buttons
+        if (!Steuerkreuz) //aktivieren der GestureDetectors
         {
             mGestureDetector = new GestureDetectorCompat(this, (GestureDetector.OnGestureListener) new GestureListener(herdenManager));
         }
@@ -112,8 +107,7 @@ public class MainActivity extends AppCompatActivity
 
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig)
-    {
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
 
         // Den Acker der aktuellen AckerView ermitteln
@@ -140,10 +134,9 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    void initializeButtons()
-    {
-        if(Steuerkreuz)
-        {
+    void initializeButtons() {
+        //initialisieren des Steuerkreuzes
+        if (Steuerkreuz) {
             hoch = findViewById(R.id.hoch);
             runter = findViewById(R.id.runter);
             rechts = findViewById(R.id.rechts);
@@ -152,13 +145,14 @@ public class MainActivity extends AppCompatActivity
             Steuerung.Bewegung(hoch, runter, rechts, links, herdenManager);
         }
 
+        //initialisieren der restlichen Buttons
         rauchen = findViewById(R.id.rauchen);
         melken = findViewById(R.id.melken);
         fressen = findViewById(R.id.fressen);
         spawn = findViewById(R.id.spawn);
 
 
-        Steuerung.Management(rauchen, melken, fressen, spawn, herdenManager);
+        Steuerung.Management(rauchen, melken, fressen, spawn, herdenManager); //Übergabe der Buttons an die Steuerklasse
     }
 }
 

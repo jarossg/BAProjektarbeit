@@ -22,7 +22,7 @@ import herdenmanagement.model.Rindvieh;
 
 /**
  * Basisklasse für die Darstellung von Bundesländern wie Macklemburg-Vorpommern.
- *
+ * <p>
  * Die AckerView ist Observer des Ackers. Werden auf letzterem Eimer, Gräser und Lebewesen
  * (insbesondere Kühe) eingefügt, informiert der Acker Objekte dieser Klasse AckerView über
  * die Änderungen. Es ist Aufgabe der AckerView für die neuen Elemente korrespondierend eine
@@ -182,6 +182,7 @@ public class AckerView extends FrameLayout implements PropertyChangeListener {
      * Paint to draw a text. Reused in {@link #onDraw(Canvas)}
      */
     private static final TextPaint TEXT_PAINT = new TextPaint();
+
     static {
         TEXT_PAINT.setTextSize(40);
         TEXT_PAINT.setColor(Color.LTGRAY);
@@ -191,6 +192,7 @@ public class AckerView extends FrameLayout implements PropertyChangeListener {
      * Paint to draw lines. Reused in {@link #onDraw(Canvas)}
      */
     private static final Paint PAINT = new Paint();
+
     static {
         PAINT.setColor(Color.WHITE);
         PAINT.setStrokeWidth(6);
@@ -202,11 +204,11 @@ public class AckerView extends FrameLayout implements PropertyChangeListener {
         if (acker != null) {
             // Anzahl der Spalten und deren Breite ermitteln
             int columns = acker.zaehleSpalten();
-            float columnWidth = getWidth() / (float)columns;
+            float columnWidth = getWidth() / (float) columns;
 
             // Anzahl der Zeilen und deren Höhe ermitteln
             int rows = acker.zaehleZeilen();
-            float rowHeight = getHeight() / (float)rows;
+            float rowHeight = getHeight() / (float) rows;
 
             // Zeilenweise ....
             for (int y = 0; y < rows; y++) {
@@ -271,23 +273,25 @@ public class AckerView extends FrameLayout implements PropertyChangeListener {
             aktualisiereGraeser((Gras) evt.getOldValue(), (Gras) evt.getNewValue());
         }
 
-        if(Acker.PROPERTY_KOT.equals(evt.getPropertyName()))
-        {
+        if (Acker.PROPERTY_KOT.equals(evt.getPropertyName())) {
+            //Löse die aktualisiereKot Methode aus um Kot anzuzeigen
             aktualisiereKot((Kot) evt.getOldValue(), (Kot) evt.getNewValue());
         }
     }
 
 
-    private void aktualisiereKot(final Kot oldValue, final Kot newValue)
-    {
+    private void aktualisiereKot(final Kot oldValue, final Kot newValue) {
         if (newValue != null && oldValue == null) {
+            //Wenn der neue Wert nicht null ist, dann füge einen AnimatedView hinzu
             newValue.fuegeBeobachterHinzu(this);
             addViewAmimated(new KotView(getContext(), animator, newValue), false);
         } else if (newValue == null && oldValue != null) {
+            //Wenn der neue Wert null ist, dann entferne den AnimatedView
             oldValue.entferneBeobachter(this);
             removeViewAnimated(oldValue.gibId());
         }
     }
+
     /**
      * Aktualisiert die Ansicht für die Gräser. Für neue Objekte
      * (newValue != null && oldValue == null) wird eine View erzeugt.
@@ -377,7 +381,7 @@ public class AckerView extends FrameLayout implements PropertyChangeListener {
     /**
      * Fügt dem Acker eine neue Darstellung für Eimer, Gras, etc. hinzu
      *
-     * @param view Hinzufügende View
+     * @param view  Hinzufügende View
      * @param onTop true fürgt die View über alle anderen ein
      */
     private void addViewAmimated(final View view, final boolean onTop) {
