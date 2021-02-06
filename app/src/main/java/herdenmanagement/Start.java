@@ -22,7 +22,7 @@ public class Start extends AppCompatActivity
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         layoutChanger = findViewById(R.id.changeLayoutButton);
-        Schalter = findViewById(R.id.switch1);
+        Schalter = findViewById(R.id.schalter);
 
         layoutChanger.setOnClickListener(new View.OnClickListener() {
             @Override
