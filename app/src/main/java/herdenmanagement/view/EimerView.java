@@ -17,9 +17,9 @@ public class EimerView extends PositionElementView {
     /**
      * Ruft den geerbeten Constructor auf
      *
-     * @param context Context der Android App, entspricht i.d.R. der {@link herdenmanagement.MainActivity}
+     * @param context  Context der Android App, entspricht i.d.R. der {@link herdenmanagement.MainActivity}
      * @param animator Animation der grafischen Darstellungen
-     * @param eimer Dargestelltes Element
+     * @param eimer    Dargestelltes Element
      */
     public EimerView(Context context, Animator animator, Eimer eimer) {
         super(context, animator, eimer);

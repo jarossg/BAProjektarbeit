@@ -10,8 +10,7 @@ import herdenmanagement.model.Eimer;
 import herdenmanagement.model.Kot;
 
 @SuppressLint("ViewConstructor")
-public class KotView extends PositionElementView
-{
+public class KotView extends PositionElementView {
 
 
     public KotView(Context context, Animator animator, Kot kot) {

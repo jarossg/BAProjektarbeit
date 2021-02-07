@@ -23,7 +23,7 @@ public class RindviehView extends PositionElementView {
     /**
      * Ruft den geerbeten Constructor auf
      *
-     * @param context Context der Android App, entspricht i.d.R. der {@link herdenmanagement.MainActivity}
+     * @param context  Context der Android App, entspricht i.d.R. der {@link herdenmanagement.MainActivity}
      * @param animator Animation der grafischen Darstellungen
      * @param rindvieh Dargestelltes Element
      */
@@ -71,6 +71,7 @@ public class RindviehView extends PositionElementView {
      * Reuse the text paint in onDraw
      */
     private final TextPaint TEXT_PAINT = new TextPaint();
+
     {
         TEXT_PAINT.setTextSize(40);
         TEXT_PAINT.setAntiAlias(true);

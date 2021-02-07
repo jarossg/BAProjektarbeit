@@ -17,9 +17,9 @@ public class GrasView extends PositionElementView {
     /**
      * Ruft den geerbeten Constructor auf
      *
-     * @param context Context der Android App, entspricht i.d.R. der {@link herdenmanagement.MainActivity}
+     * @param context  Context der Android App, entspricht i.d.R. der {@link herdenmanagement.MainActivity}
      * @param animator Animation der grafischen Darstellungen
-     * @param gras Dargestelltes Element
+     * @param gras     Dargestelltes Element
      */
     public GrasView(Context context, Animator animator, Gras gras) {
         super(context, animator, gras);

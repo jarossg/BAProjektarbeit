@@ -43,7 +43,7 @@ public class Position {
      */
     @Override
     public boolean equals(Object o) {
-        if (this == o){
+        if (this == o) {
             return true;
         }
 

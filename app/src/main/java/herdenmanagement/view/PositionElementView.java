@@ -3,8 +3,10 @@ package herdenmanagement.view;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatImageView;
+
 import android.transition.TransitionManager;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -144,7 +146,7 @@ public class PositionElementView extends AppCompatImageView implements PropertyC
     }
 
     /**
-     * @param width Breite der übergeordneten AckerView
+     * @param width  Breite der übergeordneten AckerView
      * @param height Höhe der übergeordneten AckerView
      * @return Kopie der aktuellen LayoutParams (left / right / top / bottom) basierend auf PositionsElement und AckerView
      */

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BAProjektarbeit.iml" filepath="$PROJECT_DIR$/.idea/modules/BAProjektarbeit.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BAProjektarbeit.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BAProjektarbeit.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BAProjektarbeit3.0.iml" filepath="$PROJECT_DIR$/.idea/modules/BAProjektarbeit3.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BAProjektarbeit3.0.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BAProjektarbeit3.0.app.iml" />
     </modules>
   </component>
 </project>

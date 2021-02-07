@@ -63,7 +63,6 @@ public class BeobachtbaresElement {
      */
 
 
-
     public void fuegeBeobachterHinzu(PropertyChangeListener newListener) {
         listeners.add(newListener);
     }

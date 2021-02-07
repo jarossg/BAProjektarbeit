@@ -4,8 +4,7 @@ package herdenmanagement.model;
  * Im Muster Model View Controller sind Objekte dieser Klasse Bestandteil des Model.
  * Gras kann man rauchen oder fressen.
  */
-public class Gras extends PositionsElement
-{
+public class Gras extends PositionsElement {
 
     /**
      * Er sprach "Wachse und gedeihe" und es wuchs und gedieh. Die Methode
@@ -17,8 +16,7 @@ public class Gras extends PositionsElement
      * @param acker    Acker, auf dem das Gras wachsen soll
      * @param position Position auf dem Acker für das Gras
      */
-    public void wachseUndGedeihe(Acker acker, Position position)
-    {
+    public void wachseUndGedeihe(Acker acker, Position position) {
         setzeAcker(acker);
         setzePosition(position);
     }
